@@ -12,7 +12,7 @@ var urls = {
 
 var items = 3;
 var pointer = 0;
-var delay = 20000;
+var delay = 120000;
 
 function changeUrl() { 
   
