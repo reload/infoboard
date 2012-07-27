@@ -138,7 +138,7 @@ select {
   left: 0;
   display: inline-block;
   width: 0px;
-  height: 2%;
+  height: 1%;
   background-color: #98BE31; /*#EF2876;*/
   opacity: 0.8;
 }
