@@ -16,12 +16,23 @@ var urls = {
   ]
 };
 
-var items = 3;
 var pointer = 0;
 var delay = 120000;
 
+function objectLength(obj) {
+  var result = 0;
+  for(var prop in obj) {
+    if (obj.hasOwnProperty(prop)) {
+    // or Object.prototype.hasOwnProperty.call(obj, prop)
+      result++;
+    }
+  }
+  return result;
+}
+
 function changeUrl() { 
   
+  items = objectLength(urls);
   url = urls[pointer][0].url;
   $('iframe#viewer').attr('src', url);
 
