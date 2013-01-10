@@ -16,6 +16,9 @@ var urls = {
   ],
   5: [
     {"url": "http://visibletweets.com/#query=from%3Arasmusluckow%20OR%20from%3Akasperg%20OR%20from%3Axendk%20OR%20from%3Aramlev%20OR%20from%3Atwomasc%20OR%20from%3Ahalfgirl%20OR%20from%3Aarnested%20OR%20from%3Adanquah%20OR%20from%3Atrogels%20OR%20from%3Amartinelvar%20OR%20from%3Ahamderhallas%20OR%20from%3Apaludanent%20OR%20from%3Areloaddk&animation=1"}
+  ],
+  6: [
+    {"url":"http://jenkins.reload.dk/plugin/jenkinswalldisplay/walldisplay.html?viewName=All&jenkinsUrl=http%3A%2F%2Fjenkins.reload.dk%2F"}
   ]
 };
 
