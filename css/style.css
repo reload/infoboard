@@ -143,6 +143,9 @@ select {
   opacity: 0.8;
 }
 
+#progress.loading {
+    background-color: red;
+}
 
 body, iframe {
   height: 100%;
