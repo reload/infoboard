@@ -1,28 +1,4 @@
-var urls =
-    [
-        {
-            "url": "http://timeking.reload.dk",
-            "displayTime": 10,
-            "preloadBefore": 3
-        },
-        {
-            "url":"http://jenkins.reload.dk/plugin/jenkinswalldisplay/walldisplay.html?viewName=All&jenkinsUrl=http%3A%2F%2Fjenkins.reload.dk%2F",
-            "displayTime": 15,
-            "preloadBefore": 3
-        },
-        {
-            "url": "https://reload.geckoboard.com/dashboard/470D0EB4CA98E67D/",
-            "displayTime": 15,
-            "preloadBefore": 2
-        },
-        {
-            "url": "http://reload.dk/opensource#activity",
-            "displayTime": 20,
-            "preloadBefore": 5
-        }
-    ]
-;
-
+var urls;
 var frames = ['#viewer1', '#viewer2'];
 var $frames = $('.viewerframe');
 var activeFrame = 0;
@@ -31,7 +7,9 @@ var pointer = 0;
 var nextPointer = 0;
 var $progressbar = $('#progress');
 
-$(function(){
+// Get data
+$.getJSON('data.json', function( data ) {
+    urls = data;
     $(frames[activeFrame]).attr('src', urls[nextPointer].url);
     showNext();
 });
