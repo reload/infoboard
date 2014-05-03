@@ -1,0 +1,16 @@
+defaults:
+  displayTime: 30
+  preloadBefore: 0
+boards:
+  mainboard:
+    show:
+      - url: "http://timeking.reload.dk"
+        displayTime: 20
+        preloadBefore: 5
+      - url: "http://jenkins.reload.dk/plugin/jenkinswalldisplay/walldisplay.html?viewName=All&jenkinsUrl=http%3A%2F%2Fjenkins.reload.dk%2F"
+      - url: "https://reload.geckoboard.com/dashboard/470D0EB4CA98E67D/"
+      - url: "http://reload.dk/opensource#activity"
+  project1:
+    show:
+      - url: "http://stofa.dk"
+      - url: "http://scleroseforeningen.dk"
