@@ -23,7 +23,11 @@
 
   <figure id="progress"></figure>
   
-  <iframe id="viewer" src="http://google.dk" scrolling="no" height="100%" width="100%"></iframe>
+  <iframe id="viewer1" class="viewerframe" src="http://reload.dk" scrolling="no" height="100%" width="100%"></iframe>
+  <iframe id="viewer2" class="viewerframe" src="http://reload.dk" scrolling="no" height="100%" width="100%"></iframe>
+
+
+
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.7.2.min.js"><\/script>')</script>

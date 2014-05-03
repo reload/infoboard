@@ -1,55 +1,43 @@
-var urls = {
-  0: [
-    {"url": "http://timeking.reload.dk"}
-  ],
-  1: [
-    {"url":"http://jenkins.reload.dk/plugin/jenkinswalldisplay/walldisplay.html?viewName=All&jenkinsUrl=http%3A%2F%2Fjenkins.reload.dk%2F"}
-  ],
-  2: [
-    {"url": "https://reload.geckoboard.com/dashboard/470D0EB4CA98E67D/"}
-  ],
-  3: [
-    {"url": "http://reload.dk/opensource#activity"}
-  ]
-};
-
+var urls;
+var frames = ['#viewer1', '#viewer2'];
+var $frames = $('.viewerframe');
+var activeFrame = 0;
+var nextFrame = 0;
 var pointer = 0;
-var delay = 120000;
+var nextPointer = 0;
+var $progressbar = $('#progress');
 
-function objectLength(obj) {
-  var result = 0;
-  for(var prop in obj) {
-    if (obj.hasOwnProperty(prop)) {
-    // or Object.prototype.hasOwnProperty.call(obj, prop)
-      result++;
-    }
-  }
-  return result;
-}
-
-function changeUrl() { 
-  
-  items = objectLength(urls);
-  url = urls[pointer][0].url;
-  $('iframe#viewer').attr('src', url);
-
-	// animate the progress bar
-	$('#progress').stop(true,true);
-	$('#progress').css('width','0px');
-	//$('#progress').delay(1).animate({width: '0%'}, 99, 'swing'); 
-  $('#progress').animate({width: '100%'}, delay, 'easeInSine');  
-  
-  pointer++;
-  if(pointer >= items) {
-    pointer = 0;
-  }
-  
-  setTimeout(function(){
-    changeUrl();
-  }, delay);  
-  
-}
-
-$(function(){
-  changeUrl();
+// Get data
+$.getJSON('data.json', function( data ) {
+    urls = data;
+    $(frames[activeFrame]).attr('src', urls[nextPointer].url);
+    showNext();
 });
+
+// Callback for showing
+function showNext() {
+    // animate the progress bar
+    $progressbar.stop(true,true);
+    $progressbar.removeClass('loading');
+    $progressbar.css('width','0px');
+    $progressbar.animate({width: '100%'}, urls[pointer].displayTime * 1000, 'easeInSine');
+
+    // Switch to active frame
+    //$frames.css('border', '5px solid grey');
+    $frames.hide();
+    //$(frames[activeFrame]).css('border', '5px solid red');
+    $(frames[activeFrame]).show();
+    // Change "next" frame
+    nextFrame = (activeFrame + 1) % frames.length;
+    nextPointer = (pointer + 1) % urls.length;
+    // Schedule next load (this displaytime - next preload)
+    setTimeout(function () {
+        $progressbar.addClass('loading');
+        $(frames[nextFrame]).attr('src', urls[nextPointer].url);
+    }, (urls[pointer].displayTime - urls[nextPointer].preloadBefore) * 1000);
+    // Schedule next view (this displaytime)
+    setTimeout(showNext, urls[pointer].displayTime * 1000);
+
+    pointer = nextPointer;
+    activeFrame = nextFrame;
+}
