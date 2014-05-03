@@ -33,16 +33,9 @@
   <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.7.2.min.js"><\/script>')</script>
   <script src="js/plugins.js"></script>
 
-  <!-- Load data from YAML files -->
-  <script src="js/vendor/js-yaml.min.js"></script>
-  <script type="text/javascript">
-  $.get('config.yml', function(data) {
-    var objConfig = jsyaml.load(data);
-  });
-  </script>
 
-  <script src="js/main.js"></script>
-
+    <script src="js/vendor/js-yaml.min.js"></script>
+    <script src="js/main.js"></script>
   <!-- end scripts -->    
     
 </body>
