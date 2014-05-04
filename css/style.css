@@ -144,7 +144,7 @@ select {
 }
 
 #progress.loading {
-    background-color: red;
+    background-color: #388E8E;
 }
 
 body, iframe {
