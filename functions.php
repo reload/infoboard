@@ -13,7 +13,7 @@ function saveConfig($data) {
 	}
 
 	if ($isValid) {
-		return file_put_contents("config.yml", $data);
+		return file_put_contents("config.yml", stripslashes($data));
 	}
 	{
 		return false;

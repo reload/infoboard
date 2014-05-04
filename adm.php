@@ -14,7 +14,7 @@ switch ($_REQUEST["do"]) {
       $messageClass = "error";      
     }
 
-    $formData = $_POST["config"];
+    $formData = stripslashes($_POST["config"]);
     break;
   
   default:
