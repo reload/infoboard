@@ -5,7 +5,7 @@ switch ($_REQUEST["do"]) {
   case 'save':
     # write to YAML file
     if(saveConfig($_POST["config"])) {
-      $message      = "Data has been saved";
+      $message      = "Data has been saved: " . date("Ymd H:i:s");
       $messageClass = "success";
     }
     else
