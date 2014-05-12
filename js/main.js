@@ -20,7 +20,7 @@
             showNext();
         }
         else {
-            alert('Config not found');
+            //alert('Config not found');
             window.location.href='select.php';
         }
     });

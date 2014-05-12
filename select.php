@@ -33,7 +33,7 @@
 	})(jQuery);
   </script>
 
-  <h1>Select an infoboard</h1>
+  <h1>INFOBOARD not found: Select one from the list below:</h1>
   <div id="boards"></div>  
 
 </body>
