@@ -23,8 +23,8 @@
 
   <figure id="progress"></figure>
   
-  <iframe id="viewer1" class="viewerframe" src="http://reload.dk" scrolling="no" height="100%" width="100%"></iframe>
-  <iframe id="viewer2" class="viewerframe" src="http://reload.dk" scrolling="no" height="100%" width="100%"></iframe>
+  <iframe id="viewer1" class="viewerframe" src="about:blank" scrolling="no" height="100%" width="100%"></iframe>
+  <iframe id="viewer2" class="viewerframe" src="about:blank" scrolling="no" height="100%" width="100%"></iframe>
 
 
 

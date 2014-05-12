@@ -21,6 +21,7 @@
         }
         else {
             alert('Config not found');
+            window.location.href='select.php';
         }
     });
 
