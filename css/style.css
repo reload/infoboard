@@ -147,7 +147,7 @@ select {
     background-color: #388E8E;
 }
 
-body, iframe {
+html, body, iframe {
   height: 100%;
 }
 
