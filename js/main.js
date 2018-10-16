@@ -40,6 +40,10 @@
         // Change "next" frame
         nextFrame = (activeFrame + 1) % frames.length;
         nextPointer = (pointer + 1) % urls.length;
+
+        // reset inactive frame to save memory
+        $(frames[nextFrame]).attr('src', 'about:blank');
+
         // Schedule next load (this displaytime - next preload)
         var preloadBefore = (urls[nextPointer].preloadBefore !== undefined) ? urls[nextPointer].preloadBefore : config.defaults.preloadBefore;
 
