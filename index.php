@@ -6,7 +6,7 @@
 <head>
     <meta charset="utf-8">
 
-    <title>Reload infoboard rotator</title>
+    <title>Reload infoboard rotator 2</title>
     <meta name="description" content="">
 
     <meta name="viewport" content="width=device-width">
