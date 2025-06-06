@@ -87,7 +87,7 @@ h6 {
 }
 q:before,
 q:after {
-  content: '';
+  content: "";
 }
 abbr,
 acronym {
@@ -139,23 +139,24 @@ select {
   display: inline-block;
   width: 0px;
   height: 1%;
-  background-color: #0E223B; /* #98BE31 #EF2876;*/
+  background-color: #0e223b; /* #98BE31 #EF2876;*/
   opacity: 0.8;
 }
 
 #progress.loading {
-    background-color: ##0E2292; /*#388E8E;*/
+  background-color: ##0e2292; /*#388E8E;*/
 }
 
-html, body, iframe {
+html,
+body,
+iframe {
   height: 100%;
+  border: none !important;
 }
 
 iframe#viewer {
-  display:block; 
-  width:100%; 
-  border:none;
+  display: block;
+  width: 100%;
+  border: none;
   /*margin-top: 10px;*/
 }
-
-
