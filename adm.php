@@ -1,4 +1,15 @@
 <?php
+/*
+Denne kode begrænser adgang til administrationssiden baseret på klientens IP-adresse.
+*/
+// Only allow from Reload HQ.
+if ($_SERVER['REMOTE_ADDR'] != '109.202.128.38') {
+    http_response_code(403);
+    header('Content-Type: text/plain');
+    die("403 Forbidden – your IP is not allowed.\n");
+}
+
+// som det plejer
 include_once("functions.php");
 
 switch ($_REQUEST["do"]) {
