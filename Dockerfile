@@ -1,4 +1,4 @@
-FROM abiosoft/caddy:0.8.2-php
+FROM abiosoft/caddy:1.0.3-php-no-stats
 
 COPY . /srv
 
