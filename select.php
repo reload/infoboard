@@ -7,7 +7,7 @@
     <meta name="description" content="">
 
     <meta name="viewport" content="width=device-width">
-    <link rel="shortcut icon" href="http://reload.dk/favicon.ico">
+    <link rel="shortcut icon" href="https://reload.dk/favicon.ico">
 
     <link rel="stylesheet" href="css/style.css">
     <script src="js/vendor/modernizr-2.5.3.min.js"></script>
@@ -17,7 +17,7 @@
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.7.2.min.js"><\/script>')</script>
   <script src="js/vendor/js-yaml.min.js"></script>
-   
+
   <script>
 	(function($){
 	    var config = {};
@@ -34,7 +34,7 @@
   </script>
 
   <h1>INFOBOARD not found: Select one from the list below:</h1>
-  <div id="boards"></div>  
+  <div id="boards"></div>
 
 </body>
 </html>

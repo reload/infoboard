@@ -10,7 +10,7 @@
     <meta name="description" content="">
 
     <meta name="viewport" content="width=device-width">
-    <link rel="shortcut icon" href="http://reload.dk/favicon.ico">
+    <link rel="shortcut icon" href="https://reload.dk/favicon.ico">
 
     <link rel="stylesheet" href="css/style.css">
     <script src="js/vendor/modernizr-2.5.3.min.js"></script>
@@ -22,7 +22,7 @@
     <!--[if lt IE 7]><p class="chromeframe">Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
 
   <figure id="progress"></figure>
-  
+
   <iframe id="viewer1" class="viewerframe" src="about:blank" scrolling="no" height="100%" width="100%"></iframe>
   <iframe id="viewer2" class="viewerframe" src="about:blank" scrolling="no" height="100%" width="100%"></iframe>
 
@@ -36,7 +36,7 @@
 
     <script src="js/vendor/js-yaml.min.js"></script>
     <script src="js/main.js"></script>
-  <!-- end scripts -->    
-    
+  <!-- end scripts -->
+
 </body>
 </html>

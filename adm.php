@@ -22,12 +22,12 @@ switch ($_REQUEST["do"]) {
     else
     {
       $message      = "Could not save the data. Check your config and file permissions.";
-      $messageClass = "error";      
+      $messageClass = "error";
     }
 
     $formData = stripslashes($_POST["config"]);
     break;
-  
+
   default:
     $formData = loadConfig('config.yml');
     break;
@@ -42,7 +42,7 @@ switch ($_REQUEST["do"]) {
     <meta name="description" content="">
 
     <meta name="viewport" content="width=device-width">
-    <link rel="shortcut icon" href="http://reload.dk/favicon.ico">
+    <link rel="shortcut icon" href="https://reload.dk/favicon.ico">
 
     <!-- Lets add some CodeMirror support -->
     <script src="lib/codemirror-4.1/lib/codemirror.js"></script>
@@ -52,16 +52,16 @@ switch ($_REQUEST["do"]) {
 
     <style>
     #editor {
-      width: 80%; 
+      width: 80%;
       min-height: 600px;
       border: 1px solid #333;
-    } 
+    }
     .error {
       background-color: red;
     }
     .success {
       background-color: green;
-    }    
+    }
 
     </style>
 </head>
@@ -80,12 +80,12 @@ switch ($_REQUEST["do"]) {
 
     <input type="submit" value="Gem - skriv til YAML fil" />
   </form>
-  
+
   <script>
   var myCodeMirror = CodeMirror.fromTextArea(document.getElementById("editor"), {
     lineNumbers: true,
     theme: "night"
   });
-  </script>  
+  </script>
 </body>
 </html>
