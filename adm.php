@@ -6,7 +6,7 @@ Denne kode begrænser adgang til administrationssiden baseret på klientens IP-a
 if ($_SERVER['REMOTE_ADDR'] != '109.202.128.38') {
     http_response_code(403);
     header('Content-Type: text/plain');
-    die("403 Forbidden – your IP ($remoteIp) is not allowed.\n");
+    die("403 Forbidden – your IP is not allowed.\n");
 }
 
 // som det plejer
