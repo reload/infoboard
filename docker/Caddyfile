@@ -1,4 +1,4 @@
 0.0.0.0:80
 fastcgi / 127.0.0.1:9000 php
 browse
-startup php-fpm
+on startup php-fpm
