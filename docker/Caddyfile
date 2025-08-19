@@ -1,4 +1,12 @@
 0.0.0.0:80
+
+# Trust Traefik and read XFF header
+realip {
+    header X-Forwarded-For
+    from 172.17.0.0/16
+    maxhops 3
+}
+
 fastcgi / 127.0.0.1:9000 php
 browse
 on startup php-fpm7
