@@ -11,7 +11,7 @@ if (!in_array($remoteAdress, $allowedAddresses)) {
 // som det plejer
 include_once("functions.php");
 
-switch ($_REQUEST["do"]) {
+switch ($_REQUEST["do"] ?? "") {
   case 'save':
     # write to YAML file
     if(saveConfig($_POST["config"])) {
