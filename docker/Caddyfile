@@ -1,12 +1,20 @@
-0.0.0.0:80
+{
+	skip_install_trust
 
-# Trust the Traefik bridge network and read XFF header.
-realip {
-    header X-Forwarded-For
-    from 172.23.0.0/16
-    maxhops 3
+	servers {
+		# Trust the Traefik bridge network and read XFF header.
+		trusted_proxies static 172.23.0.0/16
+		trusted_proxies_strict
+		client_ip_headers X-Forwarded-For
+	}
 }
 
-fastcgi / 127.0.0.1:9000 php
-browse
-on startup php-fpm7
+:80 {
+	root /srv
+
+	php_server {
+		# PHP gets the direct peer (Traefik) as REMOTE_ADDR by default,
+		# hand it the real client IP instead.
+		env REMOTE_ADDR {client_ip}
+	}
+}
